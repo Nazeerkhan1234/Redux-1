@@ -13,12 +13,12 @@ let rootReducer = (data="hii", action) => {
   }
 };
 let store = createStore(rootReducer);
-// store.subscribe(function () {
-  // console.log('New DATA IS ',store.getState());
-// });
-// store.dispatch({ type: "GOODMORNING", data: "nazeer" });
-// store.dispatch({ type: "hello", data: "hello" });
-// console.log(store);
+store.subscribe(function () {
+  console.log('New DATA IS ',store.getState());
+});
+store.dispatch({ type: "GOODMORNING", data: "nazeer" });
+store.dispatch({ type: "hello", data: "hello" });
+console.log(store);
 
 export const data =  createContext()
 const root = ReactDOM.createRoot(document.getElementById("root"));
